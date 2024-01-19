@@ -112,7 +112,7 @@ int lq_send (lqd_t __msgid, const char *__msg, size_t __msg_len, unsigned int __
 	local_buf[__msg_len] = 0;
 
 	lqueue_table[__msgid].lq_ptr->push ((void *)local_buf, __msg_prio);
-	
+// lqueue_table[__msgid].lq_ptr->display();
 	mylock.unlock();
 	return 0;
 }
